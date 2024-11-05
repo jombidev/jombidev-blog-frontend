@@ -58,6 +58,6 @@ jobs:
             touch ./.env
             echo '${{ secrets.ENVIRONMENT }}' | base64 --decode > ./.env
 
-            docker run --env-file .env -d -p 8080:8080 --name blog-frontend ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}
+            docker run --env-file .env -d -p 3000:3000 --name blog-frontend ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}
 
             rm ./.env
