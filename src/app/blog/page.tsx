@@ -32,7 +32,7 @@ export default function () {
 
     return (
         <S.Root>
-            {error && <>게시글을불러오는도중뭔가에러가낢...</>}
+            {error && <G.Centered>게시글을불러오는도중뭔가에러가낢...</G.Centered>}
             {articles === undefined || <>
                 <S.Container>
                     {articles.data.map((it) => (<ArticlePreview key={it.id} {...it} />))}
