@@ -10,6 +10,12 @@ const nextConfig = {
                 hostname: 'i.ytimg.com',
                 port: '',
                 pathname: '**/*'
+            },
+            {
+                protocol: 'http',
+                hostname: 'localhost',
+                port: '8080',
+                pathname: '**/*'
             }
         ]
     },
