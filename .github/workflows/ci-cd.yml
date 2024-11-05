@@ -55,9 +55,7 @@ jobs:
 
             docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}:latest
 
-            touch ./.env
-            echo '${{ secrets.ENVIRONMENT }}' | base64 --decode > ./.env
+            touch ./blog-frontend/.env
+            echo '${{ secrets.ENVIRONMENT }}' | base64 --decode > ./blog-frontend/.env
 
-            docker run --env-file .env -d -p 3000:3000 --name blog-frontend ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}
-
-            rm ./.env
+            docker -v ./blog-frontend/.env:/app/.env run --env-file ./blog-frontend/.env -d -p 3000:3000 --name blog-frontend ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}

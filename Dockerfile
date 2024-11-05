@@ -9,10 +9,10 @@ RUN cd /app && bun run build
 
 FROM base AS release
 
-COPY package.json app/
-COPY --from=install_and_build /app/.next app/.next
-COPY --from=install_and_build /app/node_modules app/node_modules
+COPY package.json /app/
+COPY --from=install_and_build /app/.next /app/.next
+COPY --from=install_and_build /app/node_modules /app/node_modules
 
-WORKDIR app/
+WORKDIR /app/
 EXPOSE 3000/tcp
 ENTRYPOINT [ "bun", "start" ]
