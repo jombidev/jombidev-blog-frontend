@@ -4,7 +4,7 @@ import * as A from '@/components/blog/articlePreview.styles';
 import ArticleDto from '@/types/articles/article.dto';
 
 function urlBuild(id: string) {
-    return `${process.env.NEXT_PUBLIC_BASE_URL}/image/${id}/file`;
+    return `https://api.jombi.dev/image/${id}/file`;
 }
 
 export default function ArticlePreview({ id, title, content, images }: ArticleDto) {
