@@ -15,7 +15,6 @@
     "@types/mdx": "^2.0.13",
     "axios": "^1.7.7",
     "babel-plugin-styled-components": "^2.1.4",
-    "dotenv": "^16.4.5",
     "next": "^15.0.2",
     "next-mdx-remote": "^5.0.0",
     "react": "^18",

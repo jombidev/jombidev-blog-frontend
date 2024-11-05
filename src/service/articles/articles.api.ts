@@ -1,4 +1,4 @@
-import blogAxios from '@/lib/blogAxios';
+import blogAxios from '@/service/global/blogAxios';
 import PagedList from '@/types/paged.dto';
 import ArticleDto from '@/types/articles/article.dto';
 
