@@ -54,7 +54,8 @@ jobs:
             docker rm $(docker ps -aq -f 'ancestor=${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}')
 
             docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}:latest
-
+            
+            mkdir blog-frondend
             touch ./blog-frontend/.env
             echo '${{ secrets.ENVIRONMENT }}' | base64 --decode > ./blog-frontend/.env
 
