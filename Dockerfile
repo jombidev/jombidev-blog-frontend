@@ -16,4 +16,4 @@ COPY --from=install_and_build /app/node_modules /app/node_modules
 
 WORKDIR /app/
 EXPOSE 3000/tcp
-ENTRYPOINT [ "entrypoint.sh" ]
+ENTRYPOINT [ "./entrypoint.sh" ]
