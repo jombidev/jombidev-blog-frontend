@@ -12,6 +12,12 @@ export const RootContainer = styled(Link)`
     border-radius: 12px;
     border: #ccc 1px solid;
     background-color: #fff;
+    
+    color: black;
+    
+    :hover {
+        color: #666;
+    }
 `;
 
 export const TextContainer = styled.div`
