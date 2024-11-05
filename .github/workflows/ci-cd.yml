@@ -58,4 +58,4 @@ jobs:
             touch ./blog-frontend.env
             echo '${{ secrets.ENVIRONMENT }}' | base64 --decode > ./blog-frontend.env
 
-            docker -v ./blog-frontend.env:/app/.env run --env-file ./blog-frontend.env -d -p 3000:3000 --name blog-frontend ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}
+            docker run -v ./blog-frontend.env:/app/.env --env-file ./blog-frontend.env -d -p 3000:3000 --name blog-frontend ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE_NAME }}
