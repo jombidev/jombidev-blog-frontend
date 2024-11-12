@@ -7,14 +7,8 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'i.ytimg.com',
+                hostname: 'api.jombi.dev',
                 port: '',
-                pathname: '**/*'
-            },
-            {
-                protocol: 'http',
-                hostname: 'localhost',
-                port: '8080',
                 pathname: '**/*'
             }
         ]
